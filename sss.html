@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ID</title>
+
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="./css/all.css">
+
+
+    <!-- --------- Owl-Carousel ------------------->
+    <link rel="stylesheet" href="./css/owl.carousel.min.css">
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css">
+
+    <!-- ------------ AOS Library ------------------------- -->
+    <link rel="stylesheet" href="./css/aos.css">
+
+    <!-- Custom Style   -->
+    <link rel="stylesheet" href="./css/Style.css">
+
+</head>
+
+<body>
+
+    <!-- ----------------------------  Navigation ---------------------------------------------- -->
+
+    <nav class="nav">
+        <div class="nav-menu flex-row">
+            <div class="nav-brand">
+                <a href="Index.html" class="text-gray">ID</a>
+            </div>
+            <div class="toggle-collapse">
+                <div class="toggle-icons">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+            <div>
+                <ul class="nav-items">
+                    <li class="nav-link">
+                        <a href="Index.html">Anasayfa</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="Posts.html">Yazılar</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="sss.html">S.S.S</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">İs Birlikleri</a>
+                    </li>
+                    <li class="nav-link">
+                        <a href="#">Hakkımızda</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="social text-gray">
+                <!-- <a href="#"><i class="fab fa-facebook-f"></i></a> -->
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <!-- <a href="#"><i class="fab fa-youtube"></i></a> -->
+            </div>
+        </div>
+    </nav>
+    <!--==========================Start Main Content================================================-->
+    <main>
+
+        <!------------------------ Site Title ---------------------->
+
+        <section class="site-title">
+         
+            <div class="site-background" data-aos="fade-up" data-aos-delay="100">
+                
+                <h1>ID</h1>
+                <h3>Selam! Her pazartesi o aradığın etkinlikleri sana gönderiyor olacağım. Haydi başlayalım!</h3>
+                <!-- <button class="btn">Explore</button> -->  
+                 <div class="form-element">
+                <input type="text" class="input-txt input-element" placeholder="E-posta Adresinizi Giriniz...">
+                <br>
+                <button id="myBtn" class="btn form-btn">KAYIT OL</button>
+
+                <div id="myModal" class="modal">
+                    <!-- Modal content -->
+                    <div class="modal-content">
+                      <span class="close">&times;</span>
+                      <div class="panel_blur"></div>
+<div class="panel">
+  <div class="panel__form-wrapper">
+    <button type="button" class="panel__prev-btn" aria-label="Go back to home page" title="Go back to home page">
+      <svg fill="rgba(255,255,255,0.5)" height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0h24v24H0z" fill="none" />
+        <path d="M21 11H6.83l3.58-3.59L9 6l-6 6 6 6 1.41-1.41L6.83 13H21z" />
+      </svg>
+    </button>
+
+    <ul class="panel__headers">
+      <li class="panel__header"><a href="#register-form" class="panel__link" role="button">Sign Up</a></li>
+      <li class="panel__header active"><a href="#login-form" class="panel__link" role="button">Sign In</a></li>
+    </ul>
+
+    <div class="panel__forms">
+
+      <!-- Login Form -->
+      <form class="form panel__login-form" id="login-form" method="post" action="/">
+        <div class="form__row">
+          <input type="text" id="email" class="form__input" name="login-mail" data-validation="email" data-error="Invalid email address." required>
+          <span class="form__bar"></span>
+          <label for="email" class="form__label">E-mail</label>
+          <span class="form__error"></span>
+        </div>
+        <div class="form__row">
+          <input type="password" id="password" class="form__input" name="login-pass" data-validation="length" data-validation-length="8-25" data-error="Password must contain 8-25 characters." required>
+          <span class="form__bar"></span>
+          <label for="password" class="form__label">Password</label>
+          <span class="form__error"></span>
+        </div>
+        <div class="form__row">
+          <input type="submit" class="form__submit" value="Get Started!">
+          <a href="#password-form" class="form__retrieve-pass" role="button">Forgot Password?</a>
+        </div>
+      </form>
+
+      <!-- Register Form -->
+      <form class="form panel__register-form" id="register-form" method="post" action="/">
+        <div class="form__row">
+          <input type="text" id="register-email" class="form__input" name="register-mail" data-validation="email" data-error="Invalid email address." required>
+          <span class="form__bar"></span>
+          <label for="register-email" class="form__label">E-mail</label>
+          <span class="form__error"></span>
+        </div>
+        <div class="form__row">
+          <input type="password" id="register-password" class="form__input" name="register-pass" data-validation="length" data-validation-length="8-25" data-error="Password must contain 8-25 characters" required>
+          <span class="form__bar"></span>
+          <label for="register-password" class="form__label">Password</label>
+          <span class="form__error"></span>
+        </div>
+        <div class="form__row">
+          <input type="password" id="register-password-check" class="form__input" name="register-repeat-pass" data-validation="confirmation" data-validation-confirm="register-pass" data-error="Your passwords did not match." required>
+          <span class="form__bar"></span>
+          <label for="register-password-check" class="form__label">Check password</label>
+          <span class="form__error"></span>
+        </div>
+        <div class="form__row">
+          <input type="submit" class="form__submit" value="Register!">
+        </div>
+      </form>
+
+      <!-- Forgot Password Form -->
+      <form class="form panel__password-form" id="password-form" method="post" action="/">
+        <div class="form__row">
+          <p class="form__info">Can't log in? Please enter your email. We will send you an email with instructions on how to reset your password.</p>
+        </div>
+        <div class="form__row">
+          <input type="text" id="retrieve-pass-email" class="form__input" name="retrieve-mail" data-validation="email" data-error="Invalid email address." required>
+          <span class="form__bar"></span>
+          <label for="retrieve-pass-email" class="form__label">E-mail</label>
+          <span class="form__error"></span>
+        </div>
+        <div class="form__row">
+          <input type="submit" class="form__submit" value="Send new password!">
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+                    </div>
+                  
+                  </div>
+            </div>
+            </div>
+        </section>
+
+        <!------------x----------- Site Title ----------x----------->
+        <div class="faq">
+          <h2>Sık Sorulan Sorular</h2>
+          <div class="accordion">
+            <div class="accordion-item">
+              <button id="accordion-button-1" aria-expanded="false"><span class="accordion-title">ID Istanbul aboneliği ücretsiz midir?</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <p>Kişisel eğlence asistanın ID tamamen ücretsizdir.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-2" aria-expanded="false"><span class="accordion-title">ID Istanbul’a nasıl üye olabilirim?</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <p>Sağ üstteki kayıt ol tuşuna basarak abone olabilirsin.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-3" aria-expanded="false"><span class="accordion-title"> ID Istanbul sadece İstanbul şehrindeki etkinlikleri mi gösteriyor?</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <p>ID, güncel olarak İstanbul’daki etkinleri gösteriyor ancak bu konudaki geliştirmelerimiz sürüyor.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-4" aria-expanded="false"><span class="accordion-title"> ID Istanbul’a üye oldum ama bültenler gelmiyor?</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <p>Bu problemin için çok üzgünüz. Hızlıca çözebilmemiz için bize destek@idistanbul.com adresinden ulaşabilirsin</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title">ID Istanbul aboneliğimi nasıl iptal edebilirim?</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <p>Bunu yazıcaz</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title"> ID Istanbul için içerik üretmek istiyorum. Nasıl yapabilirim?</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <p>Merhaba! Öncelikle bunu duymak bizi çok heyecanlandırdı. Bize founders@idistanbul.com adresinden ulaşabilirsin.</p>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <button id="accordion-button-5" aria-expanded="false"><span class="accordion-title"> ID Istanbul ekibinin bir parçası olmak istiyorum</span><span class="icon" aria-hidden="true"></span></button>
+              <div class="accordion-content">
+                <p>Merhaba! Ekibimizde yeni yüzler görmek bizi her zaman çok heyecanlandırır. Bize 
+                  founders@idistanbul.com adresinden ulaşabilirsin.
+                 </p>  <p>
+                  Burada cevabını bulamadığın sorular için destek@idistanbul.com adresine mail atabilirsin</p>
+              </div>
+            </div>
+          </div>
+        </div>
+    </main>
+
+    <!---------------x------------- Main Site Section ---------------x-------------->
+       <!-- --------------------------- Footer ---------------------------------------- -->
+
+       <footer class="footer">
+        <div class="container">
+            <div class="about-us" data-aos="fade-right" data-aos-delay="200">
+                <h2>Hakkında</h2>
+                <p>ID, senin kişisel eğlence asistanın olmak üzere tasarlanmış bir yapay zekadır. Her pazartesi sabah 
+                    aradığın etkinlikleri mail kutunda bulabilirsin.</p><p>
+                    Sağ yukarıdaki kayıt ol tuşuna basarak sen de kişisel eğlence asistanına ücretsiz ulaşabilirsin</p>
+            </div>
+            <div class="newsletter" data-aos="fade-right" data-aos-delay="200">
+              <h2>Kayıt Ol!</h2>
+              <p>Bizimle Güncel Kalın...</p>
+                <div class="form-element">
+                    <input type="text" placeholder="Email"><span><i class="fas fa-chevron-right"></i></span>
+                </div>
+            </div>
+            <div class="instagram" data-aos="fade-left" data-aos-delay="200">
+                <h2>Instagram</h2>
+                <div class="flex-row">
+                    <img src="./assets/instagram/thumb-card3.png" alt="insta1">
+                    <img src="./assets/instagram/thumb-card4.png" alt="insta2">
+                    <img src="./assets/instagram/thumb-card5.png" alt="insta3">
+                </div>
+                <div class="flex-row">
+                    <img src="./assets/instagram/thumb-card6.png" alt="insta4">
+                    <img src="./assets/instagram/thumb-card7.png" alt="insta5">
+                    <img src="./assets/instagram/thumb-card8.png" alt="insta6">
+                </div>
+            </div>
+            <div class="follow" data-aos="fade-left" data-aos-delay="200">
+                <h2>Sosyal Medya</h2>
+                <p>Bizi Takip Edin!</p>
+                <div>
+                    <!-- <i class="fab fa-facebook-f"></i> -->
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <!-- <i class="fab fa-youtube"></i> -->
+                </div>
+            </div>
+        </div>
+        <div class="move-up">
+            <span><i class="fas fa-arrow-circle-up fa-2x"></i></span>
+        </div>
+
+        <div class="copyright copyright-default">
+          <div class=" ptb--20 axil-basic-thine-line">
+              <div class=" copyright text-center">
+                 <p> © 2021 All rights reserved by ID. <a style="color:#ff009db9;" href=""> Aydınlatma Metni</a> ve <a style="color:#ff009db9;" href=""> Kullanıcı Sözleşmesi</a>  </p>
+                </div>
+          </div>
+  </div>
+  <!-- End Copyright -->
+    </footer>
+
+    <!-- -------------x------------- Footer --------------------x------------------- -->
+                <!-- Jquery Library file -->
+    <script src="./js/Jquery3.4.1.min.js"></script>
+
+    <!-- --------- Owl-Carousel js ------------------->
+    <script src="./js/owl.carousel.min.js"></script>
+
+    <!-- ------------ AOS js Library  ------------------------- -->
+    <script src="./js/aos.js"></script>
+
+    <!-- Custom Javascript file -->
+    <script src="./js/main.js"></script>
+        </body>
+
+        </html>
