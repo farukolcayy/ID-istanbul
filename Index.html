@@ -122,12 +122,13 @@
                                     </ul>
                                 </div>
                                 <div class="form-group" style="text-align: center;">
-                                    <a href="#" class="btn btn-hero" style="margin-bottom: 10px;">Gönder</a>
+                                    <a href="#" id="form-submit" class="btn btn-hero"
+                                        style="margin-bottom: 10px;">Gönder</a>
                                 </div>
 
 
 
-                                <div class="success" id="success">Message Sent</div>
+
                             </form>
                         </div>
                     </div>
@@ -246,11 +247,12 @@
 
 
                 <div class="col-lg-6">
-                    <form action="#" class="banner-form mt-5">
+                    <form id="first-form" class="banner-form mt-5">
 
 
                         <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Email">
+                            <input id="email" name="email" type="text" class="form-control" placeholder="Email"
+                                required>
                         </div>
 
                         <!-- <div class="form-group">
@@ -264,8 +266,7 @@
                             <option value="ticket">Business</option>
                         </select>
                     </div> -->
-                        <button type="button" data-toggle="modal" data-target="#myModal"
-                            class="btn btn-secondary btn-rounded">Kayıt Ol</button>
+                        <button id="first-submit" type="button" class="btn btn-secondary btn-rounded">Kayıt Ol</button>
                     </form>
                 </div>
             </div>
@@ -511,9 +512,9 @@
                         <li class="list-inline-item"><a href="https://www.instagram.com/id.istanbul/" target="_blank"><i
                                     class="fab fa-instagram"></i></a></li>
                         <li class="footer-li">İletişim</li>
-                         <li class="footer-li"><a href="#">Telefon no</a></li>
-                         <li class="footer-li"><a href="#">Email</a></li>
-                        
+                        <li class="footer-li"><a href="#">Telefon no</a></li>
+                        <li class="footer-li"><a href="#">Email</a></li>
+
                     </ul>
                 </div>
                 <div class="col-lg-12 justify-content-center text-center">
@@ -554,6 +555,43 @@
 
     <script src="js/script.js"></script>
 
+    <script>
+        $(document).ready(function () {
+
+            var _email="";
+
+            $('#first-submit').click(function (e) {
+
+                e.preventDefault();
+                _email = $("#email").val();
+
+                if ($("#first-form").valid() === true) {
+                    $('#myModal').modal({
+                        fadeDuration: 1000,
+                        fadeDelay: 0.50,
+                        closeText: 'Kapat',
+                        escapeClose: false,
+                        showClose: false
+                    });
+                    return false;
+                }else{
+                    $("#first-form").valid();
+                    return false;
+                }
+                //var values+ = $("#phone-data-form").serialize();
+            });
+
+
+
+        });
+
+
+
+
+
+    </script>
+
+    </script>
 
 </body>
 
