@@ -53,76 +53,104 @@
                         <div class="col-md-12">
 
                             <h4 class="h4">Merhaba! Sana hitap edebilmem için ismini girebilir misin?</h4>
-                            <form action="#" class="contact-form" id="contact-form">
+                            <form action="#" class="contact-form" id="second-submit">
                                 <div class="input-group">
-                                    <input type="text" aria-label="Name" name="user_name" class="form-control"
-                                        placeholder="Ad">
-                                    <input type="text" aria-label="Phone" name="user_surname" class="form-control"
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="Ad">
+                                    <input type="text" id="surname" name="surname" class="form-control"
                                         placeholder="Soyad">
                                 </div>
                                 <div class="form-group">
                                     <h4 class="h4">Sana özel öneriler gönderebilmem için sevdiğin müzik türlerini
-                                        seçebilir
-                                        misin?</h4>
+                                        seçebilir misin?</h4>
                                     <ul class="ks-cboxtags">
-                                        <li><input type="checkbox" id="1" value="Rainbow Dash"><label
+                                        <li><input type="checkbox" id="1" name="musicType" value="Alternatif"><label
                                                 for="1">Alternatif</label></li>
-                                        <li><input type="checkbox" id="2" value="Cotton Candy"><label
-                                                for="2">Blues</label></li>
-                                        <li><input type="checkbox" id="3" value="Rarity"><label
-                                                for="3">Dans&Elektronik</label></li>
-                                        <li><input type="checkbox" id="4" value="Moondancer"><label for="4">Dünya
+                                        <li><input type="checkbox" id="2" name="musicType" value="Blues"><label
+                                                for="2">Blues</label>
+                                        </li>
+                                        <li><input type="checkbox" id="3" name="musicType"
+                                                value="Dans&Elektronik"><label for="3">Dans&Elektronik</label></li>
+                                        <li><input type="checkbox" id="4" name="musicType"
+                                                value="Dünya Müzikleri"><label for="4">Dünya
                                                 Müzikleri</label></li>
-                                        <li><input type="checkbox" id="5" value="Surprise"><label for="5">Heavy
+                                        <li><input type="checkbox" id="5" name="musicType" value="Heavy Metal"><label
+                                                for="5">Heavy
                                                 Metal</label></li>
-                                        <li><input type="checkbox" id="6" value="Twilight Sparkle"><label for="6">Caz
+                                        <li><input type="checkbox" id="6" name="musicType" value="Caz Klasik"><label
+                                                for="6">Caz
                                                 Klasik</label></li>
-                                        <li><input type="checkbox" id="7" value="Fluttershy"><label
+                                        <li><input type="checkbox" id="7" name="musicType" value="Latin&Tango"><label
                                                 for="7">Latin&Tango</label></li>
-                                        <li><input type="checkbox" id="8" value="Derpy Hooves"><label for="8">New
-                                                Age</label></li>
-                                        <li><input type="checkbox" id="9" value="Princess Celestia"><label
-                                                for="9">Parti</label></li>
-                                        <li><input type="checkbox" id="10" value="Gusty"><label for="10">Klasik</label>
+                                        <li><input type="checkbox" id="8" name="musicType" value="New Age"><label
+                                                for="8">New Age</label>
                                         </li>
-                                        <li><input type="checkbox" id="11" value="Gusty"><label for="11">POP</label>
+                                        <li><input type="checkbox" id="9" name="musicType" value="Parti"><label
+                                                for="9">Parti</label>
                                         </li>
-                                        <!-- <li class="ks-selected"><input type="checkbox" id="checkboxEleven" value="Discord"><label for="checkboxEleven">Pop</label></li> -->
-                                        <li><input type="checkbox" id="12" value="Clover"><label
+                                        <li><input type="checkbox" id="10" name="musicType" value="Klasik"><label
+                                                for="10">Klasik</label>
+                                        </li>
+                                        <li><input type="checkbox" id="11" name="musicType" value="POP"><label
+                                                for="11">POP</label></li>
+                                        <li><input type="checkbox" id="12" name="musicType" value="Rap&Hiphop"><label
                                                 for="12">Rap&Hiphop</label></li>
-                                        <li><input type="checkbox" id="13" value="Baby Moondancer"><label
-                                                for="13">Rock</label></li>
-                                        <li><input type="checkbox" id="14" value="Medley"><label for="14">Türk
-                                                Sanat&Halk Müziği</label></li>
-                                        <li><input type="checkbox" id="15" value="Firefly"><label for="15">Diğer
+                                        <li><input type="checkbox" id="13" name="musicType" value="Rock"><label
+                                                for="13">Rock</label>
+                                        </li>
+                                        <li><input type="checkbox" id="14" name="musicType"
+                                                value="Türk Sanat&Halk Müziği"><label for="14">Türk Sanat&Halk
+                                                Müziği</label></li>
+                                        <li><input type="checkbox" id="15" name="musicType" value="Diğer Müzik"><label
+                                                for="15">Diğer
                                                 Müzik</label></li>
+
                                     </ul>
                                 </div>
                                 <div class="form-group">
                                     <h4 class="h4">Hangi “ID” seni tanımlar? </h4>
                                     <ul class="ks-cboxtags">
-                                        <li><input type="checkbox" id="16" value="Rainbow Dash"><label class="label2"
-                                                for="16">Gece hayatından ve kalabalık ortamlardan hoşlanırım. Müzikli ve
+                                        <li><input type="checkbox" id="16" name="personelType"
+                                                value="Gece hayatından ve kalabalık ortamlardan hoşlanırım. Müzikli ve dans edebildiğim etkinlikler bana kendimi daha rahat hissettirir."><label
+                                                class="label2" for="16">Gece hayatından ve kalabalık ortamlardan
+                                                hoşlanırım. Müzikli ve
                                                 dans edebildiğim etkinlikler bana kendimi daha rahat hissettirir.
                                             </label></li>
-                                        <li><input type="checkbox" id="17" value="Cotton Candy"><label class="label2"
-                                                for="17">Arkadaşlarımla birlikte vakit geçirebileceğim sakin etkinlikler
-                                                beni
-                                                daha çok çeker. Çok yormayan eğlence, benim eğlence
+                                        <li><input type="checkbox" id="17" name="personelType"
+                                                value="Arkadaşlarımla birlikte vakit geçirebileceğim sakin etkinlikler  beni daha çok çeker. Çok yormayan eğlence, benim eğlence anlayışımdır."><label
+                                                class="label2" name="personelType" for="17">Arkadaşlarımla birlikte
+                                                vakit
+                                                geçirebileceğim sakin etkinlikler beni daha çok çeker. Çok yormayan
+                                                eğlence, benim eğlence
                                                 anlayışımdır.</label></li>
-                                        <li><input type="checkbox" id="18" value="Rarity"><label class="label2"
-                                                for="18">Tiyatrolar, konserler ve filmler boş zamanlarımda yoğunlukla
+                                        <li><input type="checkbox" id="18" name="personelType"
+                                                value="Tiyatrolar, konserler ve filmler boş zamanlarımda yoğunlukla yaptığım aktivitelerdir. Bu etkinliklerin hepsinden büyük bir keyif alırım.">
+                                            <label class="label2" for="18">
+                                                Tiyatrolar, konserler ve filmler boş zamanlarımda yoğunlukla
                                                 yaptığım
                                                 aktivitelerdir. Bu etkinliklerin hepsinden büyük bir keyif
-                                                alırım.</label></li>
+                                                alırım.</label>
+                                        </li>
                                         <li>
-                                            <textarea name="user_message" cols="30" rows="6" class="form-control"
-                                                placeholder="Diğer"></textarea>
+                                            <textarea id="personelType-text" name="personelType-text-other" cols="30"
+                                                rows="6" class="form-control" placeholder="Diğer"></textarea>
                                         </li>
                                     </ul>
                                 </div>
+                                <h4 class="h4">Bizden sinema konusunda haftalık tavsiyeler almak ister misin?</h4>
+                                <ul style="list-style: none;">
+                                    <li>
+                                        <input id="r1" type="radio" name="radio" value="Evet" checked>
+                                        <label for="r1">Evet</label>
+                                    </li>
+                                    <li>
+                                        <input id="r2" type="radio" name="radio" value="Hayır">
+                                        <label for="r2">Hayır</label>
+                                    </li>
+                                </ul>
+
+
                                 <div class="form-group" style="text-align: center;">
-                                    <a href="#" id="form-submit" class="btn btn-hero"
+                                    <a href="#" id="second-form-submit" class="btn btn-hero"
                                         style="margin-bottom: 10px;">Gönder</a>
                                 </div>
 
@@ -267,6 +295,7 @@
                         </select>
                     </div> -->
                         <button id="first-submit" type="button" class="btn btn-secondary btn-rounded">Kayıt Ol</button>
+
                     </form>
                 </div>
             </div>
@@ -404,7 +433,6 @@
             <div class="row">
                 <div class="col-lg-8 m-auto text-center">
                     <div class="section-heading">
-
                         <h2 class="display-4">S.S.S</h2>
                     </div>
                 </div>
@@ -412,8 +440,8 @@
             <div class="wrapper">
 
                 <div class="wrap-1">
-                    <input type="radio" id="tab-1" name="tabs">
-                    <label for="tab-1">
+                    <input style="display: contents;" type="radio" id="tab-1" name="tabs">
+                    <label class="faqStyle" for="tab-1">
                         <div>ID Istanbul aboneliği ücretsiz midir?</div>
                         <div class="cross"></div>
                     </label>
@@ -421,16 +449,16 @@
                 </div>
 
                 <div class="wrap-2">
-                    <input type="radio" id="tab-2" name="tabs">
-                    <label for="tab-2">
+                    <input style="display: contents;" type="radio" id="tab-2" name="tabs">
+                    <label class="faqStyle" for="tab-2">
                         <div>ID Istanbul’a nasıl üye olabilirim?</div>
                         <div class="cross"></div>
                     </label>
                     <div class="content">Sağ üstteki kayıt ol tuşuna basarak abone olabilirsin.</div>
                 </div>
                 <div class="wrap-3">
-                    <input type="radio" id="tab-3" name="tabs">
-                    <label for="tab-3">
+                    <input style="display: contents;" type="radio" id="tab-3" name="tabs">
+                    <label class="faqStyle" for="tab-3">
                         <div>ID Istanbul sadece İstanbul şehrindeki etkinlikleri mi gösteriyor?</div>
                         <div class="cross"></div>
                     </label>
@@ -438,8 +466,8 @@
                         geliştirmelerimiz sürüyor.</div>
                 </div>
                 <div class="wrap-4">
-                    <input type="radio" id="tab-4" name="tabs">
-                    <label for="tab-4">
+                    <input style="display: contents;" type="radio" id="tab-4" name="tabs">
+                    <label class="faqStyle" for="tab-4">
                         <div>ID Istanbul’a üye oldum ama bültenler gelmiyor</div>
                         <div class="cross"></div>
                     </label>
@@ -448,8 +476,8 @@
                         ulaşabilirsin.</div>
                 </div>
                 <div class="wrap-6">
-                    <input type="radio" id="tab-6" name="tabs">
-                    <label for="tab-6">
+                    <input style="display: contents;" type="radio" id="tab-6" name="tabs">
+                    <label class="faqStyle" for="tab-6">
                         <div>ID Istanbul için içerik üretmek istiyorum. Nasıl yapabilirim?</div>
                         <div class="cross"></div>
                     </label>
@@ -458,8 +486,8 @@
                         adresinden ulaşabilirsin.</div>
                 </div>
                 <div class="wrap-7">
-                    <input type="radio" id="tab-7" name="tabs">
-                    <label for="tab-7">
+                    <input style="display: contents;" type="radio" id="tab-7" name="tabs">
+                    <label class="faqStyle" for="tab-7">
                         <div>ID Istanbul ekibinin bir parçası olmak istiyorum.</div>
                         <div class="cross"></div>
                     </label>
@@ -542,7 +570,8 @@
     <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
     <!-- Form Validator -->
     <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.11.1/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 
     <script src="plugins/easing/waypoint.js"></script>
     <script src="plugins/easing/easing.js"></script>
@@ -558,7 +587,30 @@
     <script>
         $(document).ready(function () {
 
-            var _email="";
+            $("#first-form").validate({
+
+                rules: {
+                    email: {
+                        required: true,
+                        email: true
+                    },
+
+                },
+                messages: {
+                    email: {
+                        required: "Email adresi gerekli!",
+                        email: "Geçersiz email adresi!"
+                    }
+
+                },
+                submitHandler: function (form) {
+                    form.submit();
+                }
+
+            });
+
+
+            var _email = "";
 
             $('#first-submit').click(function (e) {
 
@@ -574,11 +626,101 @@
                         showClose: false
                     });
                     return false;
-                }else{
+                } else {
                     $("#first-form").valid();
                     return false;
                 }
                 //var values+ = $("#phone-data-form").serialize();
+            });
+
+
+            var tempMusicTypes = [];
+
+
+            $('[name="musicType"]').change(function () {
+
+                tempMusicTypes = [];
+
+                $('[name="musicType"]:checked').each(function () {
+                    tempMusicTypes.push(this.value);
+                });
+
+                if (tempMusicTypes.length > 3) {
+                    swal({
+                        title: "Max 3 seçim yapılabilir!",
+                        icon: 'warning'
+
+                    });
+                    tempMusicTypes=tempMusicTypes.slice(0,-1);
+                    this.checked = false;
+                }
+
+            });
+            debugger;
+            $('#second-form-submit').click(function (e) {
+
+                e.preventDefault();
+
+                const musicTypes = [];
+                const personelTypes = [];
+
+                $('[name="musicType"]:checked').each(function () {
+                    musicTypes.push(this.value);
+                });
+
+                var _musicTypes = musicTypes.toString();
+
+                $('[name="personelType"]:checked').each(function () {
+                    personelTypes.push(this.value);
+                });
+
+                var _personelTypes = personelTypes.toString();
+
+
+
+
+                debugger
+                if ($("#second-form").valid() === false) {
+                    $("#second-form").valid();
+                    swal("Uyarı", "Eksik alanlar mevcut!", "warning");
+                    return false;
+                }
+
+
+                $.ajax({
+                    type: "POST",
+                    url: "post.php",
+                    data: values
+                })
+                    .done(function (data) {
+                        console.log(data);
+                        if ($.trim(data) === "Kayıt Başarılı") {
+                            swal({
+                                title: "Kaydınız başarıyla tamamlanmıştır.",
+                                icon: 'success'
+
+                            }).then(function () {
+                                location.reload();
+                            });
+
+                        } else if ($.trim(data) === "Tüm alanlar doldurulmalı!") {
+                            swal("Uyarı", "Eksik alanlar mevcut!", "warning");
+                        } else {
+                            swal("Hata", "Başvurunuz Kaydedilemedi!", "error")
+                        }
+
+
+
+                    })
+                    .fail(function (e) {
+                        console.log(e);
+                        swal("Hata", "Kayıt başarısız!", "error");
+
+                    });
+                return false;
+
+
+
             });
 
 
