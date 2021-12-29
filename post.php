@@ -1,40 +1,28 @@
 <?php
 
+$email = $_POST['email'];
 $name = $_POST['name'];
 $surname = $_POST['surname'];
-$email = $_POST['email'];
-$phoneNumber = $_POST['phoneNumber'];
-$educationType = $_POST['educationType'];
-$university = $_POST['university'];
-$universityDepartment = $_POST['universityDepartmentName'];
-$className = $_POST['classNameUni'];
-$highSchoolName = $_POST['hsName'];
-$highSchoolType = $_POST['hsType'];
-$highSchoolClass = $_POST['hsClass'];
-$academyOption = $_POST['academyOption'];
-$campaign = $_POST['campaign'];
-// $privacyOption = $_POST['privacyOption'];
+$musicType = $_POST['musicType'];
+$personelType = $_POST['personelType'];
+$personelTypeOther = $_POST['personelTypeOther'];
+$request = $_POST['request'];
 
 $data = array();
 
 try {
-    $conn = new PDO('mysql:host=localhost;dbname=yea_2021-2022;charset=utf8;port=3306', 'yea_yeaonline', 'Ok?2021?.');
+    $conn = new PDO('mysql:host=localhost;dbname=u0239934_id-istanbul;charset=utf8;port=3306', 
+    'u0239934_id-istanbul','?id2021?id');
     $query = $conn->prepare("INSERT INTO basvuru SET
+        email= ?,
         name= ?,
         surname= ?,
-        emailAddress= ?,
-        phoneNumber= ?,	
-        educationType= ?,
-        universityName= ?,
-        departmentName= ?,
-        className= ?,
-        highSchoolName= ?,
-        highSchoolType= ?,
-        highSchoolClass= ?,
-        academyOption= ?,
-        campaign= ?");
+        musicType= ?,	
+        personelType= ?,
+        personelTypeOther= ?,
+        request= ?");
 
-    $insert = $query->execute(array($name, $surname, $email, $phoneNumber, $educationType, $university, $universityDepartment, $className, $highSchoolName, $highSchoolType, $highSchoolClass, $academyOption,$campaign));
+    $insert = $query->execute(array($email, $name, $surname, $musicType, $personelType, $personelTypeOther,$request));
 
     if ($insert) {
         $last_id = $conn->lastInsertId();
@@ -43,7 +31,7 @@ try {
         echo json_encode($data);
     } else {
         $data['status'] = 'err';
-        $data['result'] = 'Başvuru Başarısız!';
+        $data['result'] = 'Kayıt başarısız!';
         echo json_encode($data);
     }
 } catch (PDOexception $exe) {

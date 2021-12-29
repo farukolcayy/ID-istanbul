@@ -8,8 +8,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="description"
-        content="confence,event,conference,company,meetup,business,agency,startup,sass,responsive,modern,speaker,multpage,onepage,it,business">
+
 
     <meta name="author" content="Dreambuzz">
 
@@ -55,9 +54,10 @@
                             <h4 class="h4">Merhaba! Sana hitap edebilmem için ismini girebilir misin?</h4>
                             <form action="#" class="contact-form" id="second-submit">
                                 <div class="input-group">
-                                    <input type="text" id="name" name="name" class="form-control" placeholder="Ad">
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="Ad"
+                                        required>
                                     <input type="text" id="surname" name="surname" class="form-control"
-                                        placeholder="Soyad">
+                                        placeholder="Soyad" required>
                                 </div>
                                 <div class="form-group">
                                     <h4 class="h4">Sana özel öneriler gönderebilmem için sevdiğin müzik türlerini
@@ -131,19 +131,19 @@
                                                 alırım.</label>
                                         </li>
                                         <li>
-                                            <textarea id="personelType-text" name="personelType-text-other" cols="30"
-                                                rows="6" class="form-control" placeholder="Diğer"></textarea>
+                                            <textarea id="personelTypeOther" name="personelTypeOther" cols="30" rows="6"
+                                                class="form-control" placeholder="Diğer"></textarea>
                                         </li>
                                     </ul>
                                 </div>
                                 <h4 class="h4">Bizden sinema konusunda haftalık tavsiyeler almak ister misin?</h4>
                                 <ul style="list-style: none;">
                                     <li>
-                                        <input id="r1" type="radio" name="radio" value="Evet" checked>
+                                        <input id="r1" type="radio" name="request" value="Evet" checked>
                                         <label for="r1">Evet</label>
                                     </li>
                                     <li>
-                                        <input id="r2" type="radio" name="radio" value="Hayır">
+                                        <input id="r2" type="radio" name="request" value="Hayır">
                                         <label for="r2">Hayır</label>
                                     </li>
                                 </ul>
@@ -565,13 +565,13 @@
     <!-- Main jQuery -->
 
     <!-- <script src="https://code.jquery.com/jquery-git.min.js"></script> -->
-    <script src="plugins/jquery/jquery.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <!-- Bootstrap 4.3 -->
     <script src="plugins/bootstrap/js/bootstrap.min.js"></script>
     <!-- Form Validator -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.form/3.32/jquery.form.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.0/jquery.validate.min.js"></script>
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="js/jquery.validate.min.js"></script>
 
     <script src="plugins/easing/waypoint.js"></script>
     <script src="plugins/easing/easing.js"></script>
@@ -601,6 +601,30 @@
                         required: "Email adresi gerekli!",
                         email: "Geçersiz email adresi!"
                     }
+
+                },
+                submitHandler: function (form) {
+                    form.submit();
+                }
+
+            });
+            $("#second-submit").validate({
+
+                rules: {
+                    name: "required",
+                    surname: "required",
+                    // musicType: "required",
+                    // personelType: "required",
+                    personelTypeOther: "required",
+                    request: "required",
+                },
+                messages: {
+                    name: "Ad gerekli!",
+                    surname: "Soyad gerekli!",
+                    // musicType: "Müzik Türü Seçiniz Max: 3",
+                    // personelType: "İD Seçiniz",
+                    personelTypeOther: "İD Giriniz",
+                    request: "Seçim Yapınız"
 
                 },
                 submitHandler: function (form) {
@@ -651,19 +675,24 @@
                         icon: 'warning'
 
                     });
-                    tempMusicTypes=tempMusicTypes.slice(0,-1);
+                    tempMusicTypes = tempMusicTypes.slice(0, -1);
                     this.checked = false;
                 }
 
             });
-            debugger;
+
             $('#second-form-submit').click(function (e) {
 
                 e.preventDefault();
+                if ($("#second-submit").valid() === false) {
+                    $("#second-submit").valid();
+                    swal("Uyarı", "Eksik alanlar mevcut!", "warning");
+                    return false;
+                }
 
                 const musicTypes = [];
                 const personelTypes = [];
-
+                var values = "";
                 $('[name="musicType"]:checked').each(function () {
                     musicTypes.push(this.value);
                 });
@@ -675,26 +704,25 @@
                 });
 
                 var _personelTypes = personelTypes.toString();
-
-
-
-
                 debugger
-                if ($("#second-form").valid() === false) {
-                    $("#second-form").valid();
-                    swal("Uyarı", "Eksik alanlar mevcut!", "warning");
-                    return false;
-                }
+                values += "&email=" + encodeURIComponent(_email);
+                values += "&" + $("#second-submit").serialize();
+                values += "&musicType=" + encodeURIComponent(_musicTypes);
+                values += "&personelType=" + encodeURIComponent(_personelTypes);
 
+
+                var _jjk = values;
 
                 $.ajax({
                     type: "POST",
                     url: "post.php",
+                    dataType: "json",
                     data: values
                 })
+
                     .done(function (data) {
                         console.log(data);
-                        if ($.trim(data) === "Kayıt Başarılı") {
+                        if (data.status === "ok") {
                             swal({
                                 title: "Kaydınız başarıyla tamamlanmıştır.",
                                 icon: 'success'
@@ -703,8 +731,6 @@
                                 location.reload();
                             });
 
-                        } else if ($.trim(data) === "Tüm alanlar doldurulmalı!") {
-                            swal("Uyarı", "Eksik alanlar mevcut!", "warning");
                         } else {
                             swal("Hata", "Başvurunuz Kaydedilemedi!", "error")
                         }
@@ -714,7 +740,7 @@
                     })
                     .fail(function (e) {
                         console.log(e);
-                        swal("Hata", "Kayıt başarısız!", "error");
+                        swal("Hata", "Bağlantı Hatası!", "error");
 
                     });
                 return false;
