@@ -2041,9 +2041,21 @@ Responsive
     box-shadow: none;
     margin-bottom: 50px;
   }
+
+
+
 }
 /* Custom, iPhone Retina */
 @media (min-width: 320px) and (max-width: 478px) {
+  .responsive-faq{
+  line-height: 20px !important;
+  }
+
+  #banner-3 .banner-content-2 h1{
+    font-size: 17px ;
+      }
+
+
   .transparent-black {
     background: #ffffff;
     padding: 20px;
@@ -2608,4 +2620,3 @@ input[type=radio] + label {
     --s: .5;
   }
 }
-
