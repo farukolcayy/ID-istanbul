@@ -363,7 +363,9 @@ header
     padding: 20px 0px;
   }
   nav.navbar.transparent-white li a {
-    color: #ffffff !important;
+    color: #fc5dc5 !important;
+    font-size: 22px;
+    font-weight: 700 !important;
   }
   nav.navbar.transparent-white .b-logo {
     display: block;
@@ -2619,4 +2621,13 @@ input[type=radio] + label {
   input[type=radio]:checked {
     --s: .5;
   }
+}
+#section-footer {
+
+  padding: 15px 0px 0px;
+}
+#section-footer p {
+
+  padding-top: 15px;
+  margin-top: 0px;
 }
