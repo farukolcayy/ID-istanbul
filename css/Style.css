@@ -363,7 +363,7 @@ header
     padding: 20px 0px;
   }
   nav.navbar.transparent-white li a {
-    color: #fc5dc5 !important;
+    color: #8b8ea1 !important;
     font-size: 22px;
     font-weight: 700 !important;
   }
@@ -2630,4 +2630,9 @@ input[type=radio] + label {
 
   padding-top: 15px;
   margin-top: 0px;
+}
+
+a {
+  color: #fff;
+  transition: 0.3s all;
 }
